@@ -1,0 +1,17 @@
+version: '3'
+services:
+  frontend:
+    build: .
+    ports: 
+      - 80:80
+    networks:
+      - AIShield_network
+    container_name:  aishield-frontend
+
+networks:
+  AIShield_network:
+    driver: bridge
+
+
+
+

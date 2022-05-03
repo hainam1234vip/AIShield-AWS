@@ -1,0 +1,22 @@
+version: '3'
+services:
+  backend:
+    restart: always
+    build: .
+    ports:
+      - "8000:8000"
+    networks:
+      - AIShield_network
+    volumes:
+      - ./data:/data
+      - ./assets:/assets
+      - ./weights:/weights
+    container_name: aishield-backend
+  
+networks:
+  AIShield_network:
+    driver: bridge
+
+
+
+
